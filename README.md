@@ -27,6 +27,10 @@ Sets `relay_from_hosts` host list which is used in acl checks.
 Default value: `10.0.0.0/8 : 172.16.0.0/12 : 192.168.0.0/16`
 
 #### Docker compose usage
+```
+version: '2'
+
+services:
 
 mail:
     build: ./docker/docker-exim-relay
@@ -35,3 +39,4 @@ mail:
     environment:
         - EXIM_GMAIL_LOGIN=******@gmail.com
         - EXIM_GMAIL_PASSWORD=**********
+```
